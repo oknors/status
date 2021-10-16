@@ -10,7 +10,7 @@
 
 ##
 # Set up build directory
-
+$TEMP=/tmp
 
 sudo rm -rf $TEMP/status
 cd $TEMP/
@@ -39,3 +39,5 @@ sudo systemctl enable ostat.service
 sudo systemctl daemon-reload
 sudo systemctl start ostat.service
 sudo systemctl status ostat.service
+
+sudo rm -rf $TEMP/status
