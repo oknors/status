@@ -21,5 +21,3 @@ _testmain.go
 
 *.exe
 ostat
-ostat.conf
-*.conf
