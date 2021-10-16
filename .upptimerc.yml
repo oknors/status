@@ -30,7 +30,7 @@ assignees:
 # Configure your status website
 # http://localhost:3000/docs/configuration#status-website
 status-website:
-  cname: status.okno.rs
+  cname: localhost:3000
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: StatusOKNO
   introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."

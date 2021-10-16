@@ -1,0 +1,48 @@
+{
+  "bundler": "rollup",
+  "shimport": "2.0.4",
+  "assets": {
+    "main": "client.1c6004c4.js"
+  },
+  "css": {
+    "main": [
+      "client-f7e6ed36.css"
+    ]
+  },
+  "dependencies": {
+    "index.svelte": [
+      "index.57b95e09.js",
+      "createOctokit.42ebe7db.js",
+      "inject_styles.5607aec6.js",
+      "createOctokit-777bf8f6.css",
+      "index-d57edde8.css"
+    ],
+    "rate-limit-exceeded.svelte": [
+      "rate-limit-exceeded.110421cd.js",
+      "inject_styles.5607aec6.js",
+      "rate-limit-exceeded-e1b7a1b3.css"
+    ],
+    "incident/[number].svelte": [
+      "[number].6772b45f.js",
+      "createOctokit.42ebe7db.js",
+      "inject_styles.5607aec6.js",
+      "createOctokit-777bf8f6.css",
+      "[number]-7cdb9800.css"
+    ],
+    "history/[number].svelte": [
+      "[number].8f6be2f7.js",
+      "createOctokit.42ebe7db.js",
+      "inject_styles.5607aec6.js",
+      "createOctokit-777bf8f6.css",
+      "[number]-e7104239.css"
+    ],
+    "error.svelte": [
+      "error.b2965a9c.js",
+      "inject_styles.5607aec6.js",
+      "error-a44b661b.css"
+    ]
+  },
+  "legacy_assets": {
+    "main": "client.b873a42c.js"
+  }
+}
