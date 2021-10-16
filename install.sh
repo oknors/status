@@ -12,7 +12,7 @@
 # Set up build directory
 
 
-
+sudo rm -rf $TEMP/status
 cd $TEMP/
 git clone https://github.com/oknors/status.git
 
@@ -36,6 +36,6 @@ sudo cp ostat /usr/local/bin/ostat
 
 sudo cp ostat.conf /etc/systemd/system/ostat.service
 sudo systemctl enable ostat.service
-sudo systemctl daemon_restart
+sudo systemctl daemon-reload
 sudo systemctl start ostat.service
 sudo systemctl status ostat.service
