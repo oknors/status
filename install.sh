@@ -10,13 +10,13 @@
 
 ##
 # Set up build directory
-$TEMP=/tmp
+# $TEMP=tmp
 
-sudo rm -rf $TEMP/status
-cd $TEMP/
-git clone https://github.com/oknors/status.git
+# sudo rm -rf $TEMP/status
+# cd $TEMP/
+# git clone https://github.com/oknors/status.git
 
-cd status
+# cd status
 ## 
 # We know where generate_cert.go lives when installed from ppa
 # but, if you want to find it yourself, uncomment the line below
@@ -39,5 +39,3 @@ sudo systemctl enable ostat.service
 sudo systemctl daemon-reload
 sudo systemctl start ostat.service
 sudo systemctl status ostat.service
-
-sudo rm -rf $TEMP/status
