@@ -29,13 +29,19 @@
 ##
 # Build package, generate certs, and modify permissions
 go build -o ostat
+sudo systemctl stop ostat.service
+sudo systemctl disable ostat.service
+sudo rm /etc/systemd/system/ostat.service
+sudo rm /usr/local/bin/ostat
+
 sudo cp ostat /usr/local/bin/ostat
 ##
 # This is just one way to deal changing the default configuration of the package
 # we're using upstart here and setting some runtime flags
-
+sudo mkdir -p /var/db/jorm/
 sudo cp ostat.conf /etc/systemd/system/ostat.service
 sudo systemctl enable ostat.service
 sudo systemctl daemon-reload
 sudo systemctl start ostat.service
 sudo systemctl status ostat.service
+rm ostat
