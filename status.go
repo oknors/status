@@ -27,7 +27,7 @@ func toFloat(b []byte) (f float64) {
 }
 
 func main() {
-	port := flag.String("p", ":8080", "http service address")
+	port := flag.String("p", ":11111", "http service address")
 	flag.Parse()
 
 	app := fiber.New()
