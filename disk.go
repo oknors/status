@@ -10,9 +10,9 @@ type Disk struct {
 	Free uint64 `json:"free"`
 }
 
-func disk(path string) (disk Disk) {
+func disk() (disk Disk) {
 	fs := syscall.Statfs_t{}
-	err := syscall.Statfs(path, &fs)
+	err := syscall.Statfs("/", &fs)
 	if err != nil {
 		return
 	}

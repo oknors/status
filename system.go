@@ -1,9 +1,5 @@
 package main
 
-import (
-	"encoding/json"
-)
-
 type System struct {
 	Host string      `json:"host"`
 	Disk interface{} `json:"disk"`
@@ -13,11 +9,6 @@ type System struct {
 	Time string      `json:"time"`
 }
 
-func system(s string) []byte {
-	m := System{host(), disk(s), cpuinfo(), load(), ram(), now()}
-	b, err := json.MarshalIndent(m, "", "  ")
-	if err != nil {
-		return nil
-	}
-	return b
+func system(s string) System {
+	return System{host(), disk(), cpuinfo(), load(), ram(), now()}
 }
