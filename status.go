@@ -30,7 +30,12 @@ func main() {
 	port := flag.String("p", ":11111", "http service address")
 	flag.Parse()
 
-	app := fiber.New()
+	app := fiber.New(fiber.Config{
+		Prefork:       true,
+		StrictRouting: true,
+		ServerHeader:  "OKNO",
+		AppName:       "OKNO status",
+	})
 
 	app.Get("/system", func(c *fiber.Ctx) error {
 		return c.JSON(system("/"))
@@ -39,5 +44,6 @@ func main() {
 	app.Get("/service/:service/:command", func(c *fiber.Ctx) error {
 		return service(c, c.Params("service"), c.Params("command"))
 	})
+
 	log.Fatal(app.Listen(*port))
 }
