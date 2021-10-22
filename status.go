@@ -7,7 +7,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
-	"gorm.io/gorm/logger"
+	"github.com/gofiber/fiber/v2/middleware/logger"
 )
 
 var token *string

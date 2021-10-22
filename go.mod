@@ -2,10 +2,7 @@ module github.com/oknors/status
 
 go 1.17
 
-require (
-	github.com/gofiber/fiber/v2 v2.20.2
-	gorm.io/gorm v1.21.16
-)
+require github.com/gofiber/fiber/v2 v2.20.2
 
 require (
 	github.com/andybalholm/brotli v1.0.2 // indirect
