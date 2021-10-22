@@ -6,6 +6,8 @@ import (
 	"strconv"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
+	"gorm.io/gorm/logger"
 )
 
 var token *string
@@ -36,7 +38,11 @@ func main() {
 		ServerHeader:  "OKNO",
 		AppName:       "OKNO status",
 	})
-
+	app.Use(cors.New(cors.Config{
+		AllowOrigins: "*",
+		AllowMethods: "GET,POST,PATCH",
+	}))
+	app.Use(logger.New())
 	app.Get("/system", func(c *fiber.Ctx) error {
 		return c.JSON(system("/"))
 	})
